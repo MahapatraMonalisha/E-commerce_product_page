@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <title>E-commerse Product Page</title>
+
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="26" height="26">
+                        <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 
+                        16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 
+                        12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg></a>
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><b>Coffee</b></a></li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">Shop</a></li>
+                <li class="hideOnMobile"><a href="#">About</a></li>
+                <li class="hideOnMobile"><a href="#">Contact</a></li>
+                <li>
+                    <a href="#"><span class="fa fa-shopping-cart"><sup>0</sup></span></a>
+                </li>
+                <li class="menu-button" onclick="showSidebar()">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="26" height="26">
+                    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg></a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <div class="wrapper">
+                <div class="product-box">
+                    <div class="all-images">
+                        <div class="small-images">
+                            <img src="image/img1.jpg" onclick="clicking(this)">
+                            <img src="image/img3.jpg" onclick="clicking(this)">
+                            <img src="image/img4.jpg" onclick="clicking(this)">
+                            <img src="image/img5.jpg" onclick="clicking(this)">
+                        </div>
+                        <div class="main-images">
+                            <img src="image/img1.jpg" id="image-box">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text">
+                    <div class="content">
+                        <br><br>
+                        <p class="brand">Brand: Coffee Day</p>
+                        <h2>FILTA FRESH COFFEE BAGS - CHICORY BLENDED COFFEE (PACK OF 2)</h2>
+                        <div class="review">
+                            <span> 5 </span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="price-box">
+                            <p class="price">&#8377; 390</p>
+                            <strike>&#8377; 400</strike>
+                        </div>
+                        
+                        <p>Quantity: <input type="text" value="1"></p>
+                        <button>
+                            <span class="fa fa-shopping-cart"></span>
+                            Add to cart
+                        </button>
+                        <button class="buy">
+                            <span class="fa fa-shopping-cart"></span>
+                            Buy now
+                        </button><br><br>
+
+                        <h3>Description</h3>
+                        <p><i>Discover the ritual of making authentic filter coffee in an instant. FiltaFresh delivers a balanced cup of coffee with these innovative coffee bags. Easy to use, our coffee bags let you enjoy the perfect taste of Indian filter coffee minus the hassle.</i></p>
+                        <p>Filter coffee in a minute-Brew it yourself (Chicory Blended).</p>                            
+                        <p>This comes in a pack of 2, 100g each. Each pack contains 10 sachet of 10g each.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showSidebar()
+            {
+                const sidebar=document.querySelector('.sidebar')
+                sidebar.style.display= 'flex'
+            }
+            function hideSidebar()
+            {
+                const sidebar=document.querySelector('.sidebar')
+                sidebar.style.display= 'none'
+            }
+
+            function clicking(smallImg) {
+                var fillImg = document.getElementById("image-box");
+                fillImg.src = smallImg.src
+            }
+        </script>
+    </body>
+</html>
